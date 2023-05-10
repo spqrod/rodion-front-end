@@ -1,0 +1,50 @@
+@use "variables";
+
+.footer {
+    display: flex;
+    flex-direction: column;
+    gap: variables.$small-gap;
+    border-top: 1px solid black;
+}
+
+.footerMenuContainer {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: variables.$small-gap;
+}
+
+.footerMenuItem {
+    list-style: none;
+}
+
+.footerMenuLink {
+    text-decoration: none;
+    position: relative;
+}
+
+/* Link hover underline animation */
+
+.footerMenuLink::after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    content: "";
+    width: 0;
+    height: 100%;
+    border-bottom: variables.$border;
+    transition: variables.$transition;
+}
+
+.footerMenuLink:hover::after {
+    width: 100%;
+}
+
+.footerContactsContainer {
+    display: flex;
+    justify-content: space-between;
+}
+
+.footerAllRightsReservedLine {
+    text-align: center;
+}

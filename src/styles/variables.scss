@@ -1,0 +1,29 @@
+    $header-height: 10vh;
+    $big-gap: 32px;
+    $medium-gap: 16px;
+    $small-gap: 8px;
+    $max-content-width: 1200px;
+    $side-padding-for-sections: max(5vw, calc((100vw - $max-content-width) / 2));
+
+    $primary: #95416d;
+    $on-primary: #ffffff;
+    $primary-container: #facae0;
+    $on-primary-container: #3d0026;
+    $background: #faf3fa;
+    $on-background: #1f1a1c;
+    $surface: #ffffff;
+    $on-surface: #1f1a1c;
+    $outline: #827378;
+    $surface-variant: #f1dee3;
+    $on-surface-variant: #504348;
+
+    $border: 1px solid $outline;
+    $border-radius: 0;
+
+    $font-family-1: "Arial";
+    $font-family-2: "Arial";
+
+    $transition: all .5s ease-in-out;
+    $transition-slow: all 1.5s ease-in-out;
+
+    $shadow: 5px 5px 5px 5px black;

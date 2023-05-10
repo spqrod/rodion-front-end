@@ -1,0 +1,58 @@
+@use "variables";
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: variables.$header-height;
+    border-bottom: variables.$border;
+
+    position: sticky;
+    top: 0;
+
+    z-index: 2;
+}
+
+.header .logoContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header .logoLink {
+    font-family: variables.$font-family-1;
+    font-size: 22px;
+    text-decoration: none;
+}
+
+.header .headerMenuContainer {
+    display: flex;
+    align-items: center;
+    gap: variables.$small-gap;
+}
+
+.header .headerMenuItem {
+    list-style: none;
+}
+
+.header .headerMenuLink {
+    text-decoration: none;
+    position: relative;
+}
+
+/* Link hover underline animation */
+
+.header .headerMenuLink::after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    content: "";
+    width: 0;
+    height: 100%;
+    border-bottom: variables.$border;
+    transition: variables.$transition;
+}
+
+.header .headerMenuLink:hover::after {
+    width: 100%;
+}

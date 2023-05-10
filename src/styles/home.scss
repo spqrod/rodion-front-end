@@ -1,0 +1,64 @@
+@use "variables";
+
+.homePage {
+    .heroSection {
+        min-height: calc(100vh - variables.$header-height);
+    }
+    .stackSection {
+        .stackContainer {
+            display: flex;
+        }
+        .stackItemsContainer {
+            width: 33%;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            padding: variables.$big-gap;
+            gap: variables.$big-gap;
+            height: 100%;
+        }
+        .stackItemsContainer:not(:last-of-type) {
+            border-right: variables.$border;
+        }
+        .stackItemContainer {
+            display: grid;
+            grid-template-rows: 70% 30%;
+            grid-template-columns: 1fr;
+            justify-content: center;
+            width: 100px;
+            height: 100px;
+        }
+        .stackImgContainer {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+        }  
+        .stackItemImg {
+            max-width: 100%;
+            max-height: 100%;
+        }
+        .stackItemName {
+            text-align: center;
+        }
+    }
+    .projectsSection {
+        .projectsContainer {
+            border: 1px solid black;
+            display: grid;
+            grid-template-columns: 20% 1fr;
+        }
+        .projectsList {
+            border: 1px solid red;
+        }
+        .projectContainer {
+            border: 1px solid blue;
+        }
+        .projectInfo {
+            display: none;
+        }
+        .projectInfo.active {
+            display: block;
+        }
+    }
+}

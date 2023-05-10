@@ -1,0 +1,212 @@
+@use "variables";
+
+*, *::after, *::before {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+h1, h2, p, span, a, div {
+    color: variables.$on-background;
+    line-height: 1.5;
+}
+
+h1 {
+    font-size: 42px;
+    text-align: center;
+    font-family: variables.$font-family-1;
+    padding-bottom: variables.$big-gap;
+}
+
+h2 {
+    font-size: 34px;
+    text-align: center;
+    padding-top: variables.$big-gap;
+    padding-bottom: variables.$big-gap;
+    font-family: variables.$font-family-1;
+}
+
+p, a, span, div {
+    font-size: 20px;
+    font-family: variables.$font-family-2;
+}
+
+section {
+    position: relative;
+}
+
+.footer, .header, section {
+    padding: variables.$big-gap variables.$side-padding-for-sections;
+    background-color: variables.$background;
+}
+
+li {
+    list-style: none;
+}
+
+/* Input fields */
+
+input[type=text], input[type=tel], input[type=email], textarea {
+    padding: variables.$small-gap;
+    font-size: 20px;
+    font-family: variables.$font-family-2;
+    color: variables.$on-background;
+    line-height: 1.5;
+}
+
+input, input:focus, textarea, textarea:focus {
+    border-radius: variables.$border-radius;
+    background-color: variables.$surface;
+    border: variables.$border;
+    outline: 0;
+    transition: variables.$transition;
+    /* min-width: 300px; */
+}
+
+input:focus, textarea:focus {
+    /* background-color: variables.$surface-variant;
+    color: variables.$on-surface-variant) /
+}
+
+.inputField {
+    width: 500px;
+}
+
+textarea {
+    width: 100%;
+    min-height: 200px;
+}
+
+.inputContainer {
+    /* position: relative; */
+}
+
+.inputContainer::after {
+    /* position: absolute;
+    top: 0;
+    left: 0;
+    content: "";
+    width: 0;
+    height: 100%;
+    border-bottom: 1px solid variables.$primary;
+    transition: variables.$transition); /
+}
+
+
+.inputContainer:has(input:focus)::after {
+    /* width: 100%; */
+}
+
+
+.legalConsentCheckboxContainer {
+    display: flex;
+    gap: variables.$medium-gap;
+}
+
+.legalConsentCheckbox {
+    width: 30px;
+    height: 30px;
+}
+
+.alternativeBookingMethodContainer {
+    padding-top: variables.$big-gap;
+    border-top: variables.$border;
+    display: flex;
+    flex-direction: column;
+    gap: variables.$medium-gap;
+}
+
+.socialLinksContainer {
+    justify-content: center;
+    gap: variables.$big-gap;
+}
+
+.form {
+    max-width: min(500px, 80vw);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: variables.$medium-gap;
+    padding-bottom: variables.$big-gap;
+}
+
+/* Button */
+
+.button {
+    min-width: 209px;
+    height: 50px;
+    padding: variables.$small-gap;
+    position: relative;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: none;
+    background-color: variables.$primary-container;
+    color: variables.$on-primary-container;
+
+    border: none;
+    cursor: pointer;
+
+    font-family: variables.$font-family-2;
+    letter-spacing: 3px;
+    font-size: 20px;
+}
+
+.buttonLink {
+    text-decoration: none;
+    font-weight: 500;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+}
+  
+.buttonBorder{
+    position:absolute;
+    background:none;
+    transition: variables.$transition;
+}
+
+.buttonBorder:nth-of-type(1){
+    top:0;
+    left:0;
+    width:0;
+    height:0;
+    border-top: variables.$border;
+}
+  
+.buttonBorder:nth-of-type(2){
+    top:0;
+    right:0;
+    width:10px;
+    height:0;
+    border-right: variables.$border;
+}
+  
+.buttonBorder:nth-of-type(3){
+    bottom:0;
+    right:0;
+    width:0;
+    height:0;
+    border-bottom: variables.$border;
+}
+
+.buttonBorder:nth-of-type(4){
+    bottom:0;
+    left:0;
+    width:0;
+    height:0;
+    border-left: variables.$border;
+}
+
+.button:hover .buttonBorder:nth-of-type(1n){
+    width:100%;
+}
+
+.button:hover .buttonBorder:nth-of-type(2n){
+    height:100%;
+}
