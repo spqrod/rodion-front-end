@@ -26,7 +26,7 @@ h2 {
     font-family: variables.$font-family-1;
 }
 
-p, a, span, div {
+p, a, span, div, button {
     font-size: 20px;
     font-family: variables.$font-family-2;
 }
@@ -132,6 +132,13 @@ textarea {
 
 /* Button */
 
+button {
+    outline: none;
+    border: none;
+    background-color: variables.$background;
+    color: variables.$on-background;
+}
+
 .button {
     min-width: 209px;
     height: 50px;
@@ -148,9 +155,7 @@ textarea {
     border: none;
     cursor: pointer;
 
-    font-family: variables.$font-family-2;
     letter-spacing: 3px;
-    font-size: 20px;
 }
 
 .buttonLink {

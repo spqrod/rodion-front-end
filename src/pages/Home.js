@@ -2,6 +2,7 @@ import "../styles/home.scss";
 import { Link } from "react-router-dom";
 import { HashLink } from "react-router-hash-link";
 import { useEffect } from "react";
+import { useState } from "react";
 import htmlIcon from "../images/html.svg";
 import cssIcon from "../images/css.svg";
 import jsIcon from "../images/js.svg";
@@ -17,29 +18,29 @@ import webpackIcon from "../images/webpack.svg";
 import restapiIcon from "../images/rest-api.png";
 import terminalIcon from "../images/terminal.svg";
 import w3cIcon from "../images/w3c.svg";
+import Project from "../components/Project";
 
 
 
 export default function Home() {
 
-    useEffect(() => {
-
-    });
+    const [index, setIndex] = useState(0);
 
     function handleClick(e) {
-        const listIndex = e.target.attributes.index.value;
-        const projects = document.querySelectorAll(".projectInfo");
-        projects.forEach(project => {
-            const projectIndex = project.attributes.index.value;
-            if (listIndex === projectIndex) {
-                renderProject(project);
-            }
-        });
+        let listIndex = e.target.attributes.index.value;
+        setIndex(listIndex);
+        // const projects = document.querySelectorAll(".projectInfo");
+        // projects.forEach(project => {
+        //     const projectIndex = project.attributes.index.value;
+        //     if (listIndex === projectIndex) {
+        //         renderProject(project);
+        //     }
+        // });
     }
 
-    function renderProject(project) {
-        project.classList.add("active");
-    }
+    // function renderProject(project) {
+    //     project.classList.add("active");
+    // }
 
     return (
         <main className="homePage">
@@ -156,29 +157,24 @@ export default function Home() {
                 <div className="projectsContainer">
                     <div className="projectsList">
                         <ul>
-                            <li className="projectsListItem">
-                                <button type="button" onClick={handleClick} index="0">
+                            <li>
+                                <button className="projectsListItem" type="button" onClick={handleClick} index="0">
                                     Dr Watson Dental
                                 </button>
                             </li>
                             <li>
-                                <button type="button" onClick={handleClick} index="1">
+                                <button className="projectsListItem" type="button" onClick={handleClick} index="1">
                                     Darya Zharabtsova
                                 </button>
                             </li>
                             <li>
-                                <p>Taradasi Medics</p>
+                                <button className="projectsListItem" type="button" onClick={handleClick} index="2">
+                                    Taradasi Medics
+                                </button>
                             </li>
                         </ul>
                     </div>
-                    <div className="projectDisplay">
-                        <div className="projectInfo" index="0">
-                            Project info 0
-                        </div>
-                        <div className="projectInfo" index="1">
-                            Project info 1
-                        </div>
-                    </div>
+                    <Project projectIndex={index}/>
                 </div>
 
 

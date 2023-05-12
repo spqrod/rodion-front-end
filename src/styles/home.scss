@@ -44,21 +44,18 @@
     }
     .projectsSection {
         .projectsContainer {
-            border: 1px solid black;
             display: grid;
-            grid-template-columns: 20% 1fr;
+            grid-template-columns: max-content 1fr;
         }
         .projectsList {
-            border: 1px solid red;
+            border-right: variables.$border;
+            padding-right: variables.$big-gap;
+        }
+        .projectListItem {
+            
         }
         .projectContainer {
-            border: 1px solid blue;
-        }
-        .projectInfo {
-            display: none;
-        }
-        .projectInfo.active {
-            display: block;
+            padding-left: variables.$big-gap;
         }
     }
 }
