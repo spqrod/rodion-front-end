@@ -1,0 +1,23 @@
+@use "variables";
+
+
+
+.projectContainer {
+    padding-left: variables.$big-gap;
+    position: relative;
+
+    .projectImageContaienr {
+
+    }
+
+    .projectImage {
+        width: 80%;
+    }
+
+    .projectInfoContainer {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        border: variables.$border;
+    }
+}

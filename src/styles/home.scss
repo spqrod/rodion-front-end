@@ -1,9 +1,18 @@
 @use "variables";
 
+
 .homePage {
-    .heroSection {
-        min-height: calc(100vh - variables.$header-height);
+
+    section {
+        min-height: 100vh - variables.$header-height;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
     }
+
+    .heroSection {
+    }
+
     .stackSection {
         .stackContainer {
             display: flex;
@@ -42,20 +51,22 @@
             text-align: center;
         }
     }
+
     .projectsSection {
         .projectsContainer {
             display: grid;
             grid-template-columns: max-content 1fr;
+            height: 100%;
+            flex-grow: 1;
         }
         .projectsList {
+            display: flex;
+            align-items: center;
             border-right: variables.$border;
             padding-right: variables.$big-gap;
         }
         .projectListItem {
-            
-        }
-        .projectContainer {
-            padding-left: variables.$big-gap;
+
         }
     }
 }

@@ -29,18 +29,9 @@ export default function Home() {
     function handleClick(e) {
         let listIndex = e.target.attributes.index.value;
         setIndex(listIndex);
-        // const projects = document.querySelectorAll(".projectInfo");
-        // projects.forEach(project => {
-        //     const projectIndex = project.attributes.index.value;
-        //     if (listIndex === projectIndex) {
-        //         renderProject(project);
-        //     }
-        // });
-    }
+    };
 
-    // function renderProject(project) {
-    //     project.classList.add("active");
-    // }
+
 
     return (
         <main className="homePage">
@@ -226,12 +217,16 @@ export default function Home() {
                 </TabPanel> */}
             </section>
 
-            <section className="aboutSection">
+            <section className="experienceSection">
+                <h2>Experience</h2>
+            </section>
 
+            <section className="aboutSection">
+                <h2>Off topic</h2>
             </section>
 
             <section className="contactSection">
-
+                <h2>Contact</h2>
             </section>
 
         </main>
