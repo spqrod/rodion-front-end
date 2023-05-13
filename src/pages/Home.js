@@ -218,11 +218,46 @@ export default function Home() {
             </section>
 
             <section className="experienceSection">
-                <h2>Experience</h2>
+                <h2>My Story</h2>
+                <div className="experienceContainer">
+                    <div className="experienceItemContainer">
+                        <p>Applied Mathematics</p>
+                        <p>Bachelor Studies (switched to Computer Science)</p>
+                        <p>2013 - 2014</p>
+                    </div>
+                    <div className="experienceItemContainer">
+                        <p>Computer Science</p>
+                        <p>Bachelor Studies</p>
+                        <p>2014 - 2018</p>
+                    </div>
+                    <div className="experienceItemContainer">
+                        <p>Hotel Business</p>
+                        <p>Director</p>
+                        <p>2018 - 2022</p>
+                    </div>
+                    <div className="experienceItemContainer">
+                        <p>Wordpress Developer (part time)</p>
+                        <p>Freelance</p>
+                        <p>2020 - 2022</p>
+                    </div>
+                    <div className="experienceItemContainer">
+                        <p>Full Stack Javascript Developer</p>
+                        <p>Freelance</p>
+                        <p>2022 - present</p>
+                    </div>
+                </div>
             </section>
 
             <section className="aboutSection">
                 <h2>Off topic</h2>
+                <div className="aboutContainer">
+                    <div className="aboutImageContainer">
+                        <img src="" alt="" />
+                    </div>
+                    <div className="aboutInfoContainer">
+
+                    </div>
+                </div>
             </section>
 
             <section className="contactSection">

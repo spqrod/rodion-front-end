@@ -69,4 +69,29 @@
 
         }
     }
+    
+    .experienceSection {
+        align-items: center;
+        .experienceContainer {
+            flex-grow: 1;
+            width: 600px;
+            display: flex;
+            gap: variables.$big-gap;
+            flex-direction: column;
+            align-items: start;
+            justify-content: space-around;
+        }
+        .experienceItemContainer {
+            border: variables.$border;
+            width: 400px;
+            min-height: 150px;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+        }
+
+        .experienceItemContainer:nth-of-type(2n) {
+            align-self: end;
+        }
+    }
 }
