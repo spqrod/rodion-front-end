@@ -1,8 +1,5 @@
 @use "variables";
 
-
-
-
 .homePage {
 
     section {
@@ -73,27 +70,48 @@
     }
     
     .experienceSection {
-        align-items: center;
         .experienceContainer {
-            flex-grow: 1;
-            width: 600px;
-            display: flex;
-            gap: variables.$big-gap;
-            flex-direction: column;
-            align-items: start;
-            justify-content: space-around;
+            display: grid;
+            grid-template-columns: 1fr 10px 1fr;
+            // grid-template-rows: repeat(auto, 1fr) [last];
+            // grid-template-rows: minmax(1fr, auto) [last];
+            column-gap: variables.$big-gap;
         }
+        
+
         .experienceItemContainer {
             border: variables.$border;
-            width: 400px;
-            min-height: 150px;
             display: flex;
             justify-content: center;
             flex-direction: column;
+            grid-column: 1 / 2;
+            &.appliedMathematics {
+                grid-row: 1 / 2;
+            }
+            &.computerScience {
+                grid-row: 2 / 6;
+                grid-column: 3 / 4;
+            }
+            &.hotel {
+                grid-row: 6 / 10;
+            }
+            &.wordpress {
+                grid-row: 8 / 10;
+                grid-column: 3 / 4;
+            }
+            &.javascript {
+                // The grid-row-end is hard coded at the moment (12). Because of this you will need to update it for each new year. Find a way to make it span to the last line. You tried -1 and naming the line but those didn't work as expected.
+                grid-row: 10 / 12;
+                grid-column: 3 / 4;
+            }
         }
-
-        .experienceItemContainer:nth-of-type(2n) {
-            align-self: end;
+        .timelineYear {
+            grid-column: 2 / 3;
+            height: 100px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-bottom: variables.$border;
         }
     }
 

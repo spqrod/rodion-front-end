@@ -20,8 +20,6 @@ import terminalIcon from "../images/terminal.svg";
 import w3cIcon from "../images/w3c.svg";
 import Project from "../components/Project";
 
-
-
 export default function Home() {
 
     const [index, setIndex] = useState(0);
@@ -30,8 +28,15 @@ export default function Home() {
         let listIndex = e.target.attributes.index.value;
         setIndex(listIndex);
     };
-
-
+    
+    function createTimeline() {
+        const numberOfYearsSince2013 = new Date().getFullYear() - 2013 + 1;
+        const array = [];
+        for (let i = 0; i < numberOfYearsSince2013; i++) {
+            array.push( <div className="timelineYear" key={i}>{2013 + i}</div> );
+        }
+        return array;
+    }
 
     return (
         <main className="homePage">
@@ -220,27 +225,27 @@ export default function Home() {
             <section className="experienceSection">
                 <h2>My Story</h2>
                 <div className="experienceContainer">
-                    <div className="experienceItemContainer">
-                        <p>Applied Mathematics</p>
-                        <p>Bachelor Studies (switched to Computer Science)</p>
+                    {createTimeline()}
+                    <div className="experienceItemContainer appliedMathematics">
+                        <p>Applied Mathematics - Bachelor Studies</p>
+                        <p>Switched to Computer Science</p>
                         <p>2013 - 2014</p>
                     </div>
-                    <div className="experienceItemContainer">
-                        <p>Computer Science</p>
-                        <p>Bachelor Studies</p>
+                    <div className="experienceItemContainer computerScience">
+                        <p>Computer Science - Bachelor Studies</p>
                         <p>2014 - 2018</p>
                     </div>
-                    <div className="experienceItemContainer">
+                    <div className="experienceItemContainer hotel">
                         <p>Small Hotel and Apartment Complex</p>
                         <p>Director</p>
                         <p>2018 - 2022</p>
                     </div>
-                    <div className="experienceItemContainer">
+                    <div className="experienceItemContainer wordpress">
                         <p>Wordpress Developer (part time)</p>
                         <p>Freelance</p>
                         <p>2020 - 2022</p>
                     </div>
-                    <div className="experienceItemContainer">
+                    <div className="experienceItemContainer javascript">
                         <p>Full Stack Javascript Developer</p>
                         <p>Freelance</p>
                         <p>2022 - present</p>
