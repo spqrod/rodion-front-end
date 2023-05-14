@@ -252,10 +252,19 @@ export default function Home() {
                 <h2>Off topic</h2>
                 <div className="aboutContainer">
                     <div className="aboutImageContainer">
-                        <img src="" alt="" />
+                        <img className="aboutImage" src={require("../images/hiking.jpeg")} alt="" />
                     </div>
                     <div className="aboutInfoContainer">
-
+                        <p>
+                            I consider myself a well organized person with good time and task managements skills. My big 3 tools for this I use 24/7 are Calendar, Reminders and Obsidian. The former is an amazing open-source app I use for writing, planning and drawing mind maps and plans. 
+                        </p>
+                        <p>
+                            <em>Not all those who wander are lost.</em><br/>
+                            My main thing after coding is hiking. I love getting into the wild, wandering with or without maps and sleeping under the stars.
+                        </p>
+                        <p>
+                            I also enjoy reading good literature from Homer to Sci-Fi to self-development. My favourite authors are John R. R. Tolkien, Stephen Fry, Sir Arthur Conan Doyle, Robert Greene.
+                        </p>
                     </div>
                 </div>
             </section>

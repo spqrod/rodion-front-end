@@ -4,7 +4,7 @@
 .homePage {
 
     section {
-        min-height: 100vh - variables.$header-height;
+        // min-height: 100vh - variables.$header-height;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -93,5 +93,26 @@
         .experienceItemContainer:nth-of-type(2n) {
             align-self: end;
         }
+    }
+
+    .aboutSection {
+
+        .aboutContainer {
+            display: flex;
+            gap: variables.$big-gap;
+            align-items: center;
+        }
+        .aboutImageContainer {
+            flex-basis: 500px;
+        }
+        .aboutImage {
+            width: 100%;
+        }
+        .aboutInfoContainer {
+
+        }
+    }
+
+    .contactSection {
     }
 }
