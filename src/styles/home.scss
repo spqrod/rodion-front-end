@@ -1,6 +1,8 @@
 @use "variables";
 
 
+
+
 .homePage {
 
     section {
@@ -109,10 +111,39 @@
             width: 100%;
         }
         .aboutInfoContainer {
-
+            display: flex;
+            flex-direction: column;
+            gap: variables.$big-gap;
         }
     }
 
     .contactSection {
+        .contactContainer {
+            display: flex;
+            gap: variables.$big-gap;
+        }
+        .contactForm {
+            width: 50%;
+            display: flex;
+            flex-direction: column;
+            gap: variables.$medium-gap;
+        }
+        .legalConsentCheckboxContainer {
+            display: flex;
+            gap: variables.$medium-gap;
+        }
+
+        .legalConsentCheckbox {
+            width: 30px;
+            height: 30px;
+        }
+
+        .contactLinksContainer {
+        }
+
+        .contactLink {
+            display: block;
+        }
+
     }
 }

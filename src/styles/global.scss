@@ -46,7 +46,7 @@ li {
 
 /* Input fields */
 
-input[type=text], input[type=tel], input[type=email], textarea {
+input[type=text], input[type=email], textarea {
     padding: variables.$small-gap;
     font-size: 20px;
     font-family: variables.$font-family-2;
@@ -98,37 +98,6 @@ textarea {
 }
 
 
-.legalConsentCheckboxContainer {
-    display: flex;
-    gap: variables.$medium-gap;
-}
-
-.legalConsentCheckbox {
-    width: 30px;
-    height: 30px;
-}
-
-.alternativeBookingMethodContainer {
-    padding-top: variables.$big-gap;
-    border-top: variables.$border;
-    display: flex;
-    flex-direction: column;
-    gap: variables.$medium-gap;
-}
-
-.socialLinksContainer {
-    justify-content: center;
-    gap: variables.$big-gap;
-}
-
-.form {
-    max-width: min(500px, 80vw);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: variables.$medium-gap;
-    padding-bottom: variables.$big-gap;
-}
 
 /* Button */
 
@@ -154,64 +123,16 @@ button {
 
     border: none;
     cursor: pointer;
-
-    letter-spacing: 3px;
 }
 
-.buttonLink {
-    text-decoration: none;
-    font-weight: 500;
-    position: relative;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 1;
-}
-  
-.buttonBorder{
-    position:absolute;
-    background:none;
-    transition: variables.$transition;
-}
-
-.buttonBorder:nth-of-type(1){
-    top:0;
-    left:0;
-    width:0;
-    height:0;
-    border-top: variables.$border;
-}
-  
-.buttonBorder:nth-of-type(2){
-    top:0;
-    right:0;
-    width:10px;
-    height:0;
-    border-right: variables.$border;
-}
-  
-.buttonBorder:nth-of-type(3){
-    bottom:0;
-    right:0;
-    width:0;
-    height:0;
-    border-bottom: variables.$border;
-}
-
-.buttonBorder:nth-of-type(4){
-    bottom:0;
-    left:0;
-    width:0;
-    height:0;
-    border-left: variables.$border;
-}
-
-.button:hover .buttonBorder:nth-of-type(1n){
-    width:100%;
-}
-
-.button:hover .buttonBorder:nth-of-type(2n){
-    height:100%;
-}
+// .buttonLink {
+//     text-decoration: none;
+//     font-weight: 500;
+//     position: relative;
+//     width: 100%;
+//     height: 100%;
+//     display: flex;
+//     justify-content: center;
+//     align-items: center;
+//     z-index: 1;
+// }

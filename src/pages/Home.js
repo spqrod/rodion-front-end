@@ -231,7 +231,7 @@ export default function Home() {
                         <p>2014 - 2018</p>
                     </div>
                     <div className="experienceItemContainer">
-                        <p>Hotel Business</p>
+                        <p>Small Hotel and Apartment Complex</p>
                         <p>Director</p>
                         <p>2018 - 2022</p>
                     </div>
@@ -271,6 +271,24 @@ export default function Home() {
 
             <section className="contactSection">
                 <h2>Contact</h2>
+                <div className="contactContainer">
+                    <form className="contactForm" action="">
+                        <input type="text" name="name" id="name" placeholder="Name" />
+                        <input type="email" name="email" id="email" placeholder="Email"/>
+                        <textarea name="" id="" cols="30" rows="10" placeholder="Message"></textarea>
+                        <div className="legalConsentCheckboxContainer">
+                            <input className="legalConsentCheckbox" type="checkbox" name="legalConsentCheckbox" id="legalConsentCheckbox" />
+                            <label htmlFor="legalConsentCheckbox">I agree to Privacy Policy and Terms of Service</label>
+                        </div>
+                        <button className="button">Send</button>
+                    </form>
+                    <div className="contactLinksContainer">
+                        <Link className="contactLink" to="">GitHub</Link>
+                        <Link className="contactLink" to="">LinkedIn</Link>
+                        <Link className="contactLink" to="">Facebook</Link>
+                    </div>
+                </div>
+
             </section>
 
         </main>
