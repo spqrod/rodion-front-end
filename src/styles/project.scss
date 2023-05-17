@@ -19,5 +19,7 @@
         right: 0;
         bottom: 0;
         border: variables.$border;
+        background-color: variables.$surface-transparent;
+        backdrop-filter: blur(variables.$blur);
     }
 }

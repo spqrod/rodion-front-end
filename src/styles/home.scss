@@ -15,16 +15,16 @@
     .stackSection {
         .stackContainer {
             display: flex;
+
         }
         .stackItemsContainer {
             width: 33%;
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
-            align-items: center;
+            align-content: start;
             padding: variables.$big-gap;
             gap: variables.$big-gap;
-            height: 100%;
         }
         .stackItemsContainer:not(:last-of-type) {
             border-right: variables.$border;
@@ -77,16 +77,19 @@
             // grid-template-rows: minmax(1fr, auto) [last];
             column-gap: variables.$big-gap;
         }
-        
 
         .experienceItemContainer {
-            border: variables.$border;
+            border-left: variables.$border;
+            padding: variables.$big-gap;
             display: flex;
             justify-content: center;
             flex-direction: column;
             grid-column: 1 / 2;
             &.appliedMathematics {
                 grid-row: 1 / 2;
+                border-left: none;
+                border-right: variables.$border;
+                text-align: right;
             }
             &.computerScience {
                 grid-row: 2 / 6;
@@ -94,6 +97,9 @@
             }
             &.hotel {
                 grid-row: 6 / 10;
+                border-left: none;
+                border-right: variables.$border;
+                text-align: right;
             }
             &.wordpress {
                 grid-row: 8 / 10;

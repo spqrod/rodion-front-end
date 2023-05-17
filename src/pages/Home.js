@@ -32,7 +32,8 @@ export default function Home() {
     function createTimeline() {
         const numberOfYearsSince2013 = new Date().getFullYear() - 2013 + 1;
         const array = [];
-        for (let i = 0; i < numberOfYearsSince2013; i++) {
+        for (let i = 0; i < numberOfYearsSince2013
+            ; i++) {
             array.push( <div className="timelineYear" key={i}>{2013 + i}</div> );
         }
         return array;
