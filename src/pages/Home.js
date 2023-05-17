@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { HashLink } from "react-router-hash-link";
 import { useEffect } from "react";
 import { useState } from "react";
+import { useRef } from "react";
 import htmlIcon from "../images/html.svg";
 import cssIcon from "../images/css.svg";
 import jsIcon from "../images/js.svg";
@@ -19,6 +20,8 @@ import restapiIcon from "../images/rest-api.png";
 import terminalIcon from "../images/terminal.svg";
 import w3cIcon from "../images/w3c.svg";
 import Project from "../components/Project";
+import ReCAPTCHA from "react-google-recaptcha";
+
 
 export default function Home() {
 
@@ -37,7 +40,35 @@ export default function Home() {
             array.push( <div className="timelineYear" key={i}>{2013 + i}</div> );
         }
         return array;
-    }
+    };
+
+    const captchaRef = useRef(null);
+
+    async function handleSubmit(e) {
+        e.preventDefault();
+        const token = captchaRef.current.getValue();
+        captchaRef.current.reset();
+
+        const { name, email, message } = e.target.elements;
+
+        const messageDetails = {
+            name: name.value,
+            email: email.value,
+            message: message.value,
+            token
+        };
+
+        const response = await fetch("https://drwatsondental.com/contact", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json;charset=utf-8"
+            },
+            body: JSON.stringify(messageDetails),
+        });
+        
+        const result = await response.json();
+        alert(result.status);
+    };
 
     return (
         <main className="homePage">
@@ -278,7 +309,7 @@ export default function Home() {
             <section className="contactSection">
                 <h2>Contact</h2>
                 <div className="contactContainer">
-                    <form className="contactForm" action="">
+                    <form className="contactForm" onSubmit={handleSubmit}>
                         <input type="text" name="name" id="name" placeholder="Name" />
                         <input type="email" name="email" id="email" placeholder="Email"/>
                         <textarea name="" id="" cols="30" rows="10" placeholder="Message"></textarea>
@@ -286,6 +317,10 @@ export default function Home() {
                             <input className="legalConsentCheckbox" type="checkbox" name="legalConsentCheckbox" id="legalConsentCheckbox" />
                             <label htmlFor="legalConsentCheckbox">I agree to Privacy Policy and Terms of Service</label>
                         </div>
+                        <ReCAPTCHA 
+                            sitekey = { process.env.REACT_APP_GOOGLE_RECAPTCHA_SITE_KEY }
+                            ref = { captchaRef }
+                        />
                         <button className="button">Send</button>
                     </form>
                     <div className="contactLinksContainer">
