@@ -44,7 +44,7 @@ export default function Home() {
 
     const captchaRef = useRef(null);
 
-    async function handleSubmit(e) {
+    async function handleFormSubmit(e) {
         e.preventDefault();
         const token = captchaRef.current.getValue();
         captchaRef.current.reset();
@@ -70,11 +70,21 @@ export default function Home() {
         alert(result.status);
     };
 
+    function revealLegalConsentCheckbox() {
+        const legalConsentCheckboxContainer = document.querySelector(".legalConsentCheckboxContainer");
+        legalConsentCheckboxContainer.classList.add("active");
+    }
+
+    function revealReCaptcha() {
+        const reCaptcha = document.querySelector(".reCaptcha");
+        reCaptcha.classList.add("active");
+    }
+
     return (
         <main className="homePage">
 
             <section className="heroSection">
-                <h1>Rodion Lizunkov</h1>
+                <h1>Rodion</h1>
                 <h1>Web Developer</h1>
             </section>
 
@@ -309,15 +319,16 @@ export default function Home() {
             <section className="contactSection">
                 <h2>Contact</h2>
                 <div className="contactContainer">
-                    <form className="contactForm" onSubmit={handleSubmit}>
+                    <form className="contactForm" onSubmit={handleFormSubmit}>
                         <input type="text" name="name" id="name" placeholder="Name" />
-                        <input type="email" name="email" id="email" placeholder="Email"/>
-                        <textarea name="" id="" cols="30" rows="10" placeholder="Message"></textarea>
+                        <input type="email" name="email" id="email" required placeholder="Email" onChange={revealLegalConsentCheckbox}/>
+                        <textarea name="message" id="message" cols="30" rows="10" required placeholder="Message"></textarea>
                         <div className="legalConsentCheckboxContainer">
-                            <input className="legalConsentCheckbox" type="checkbox" name="legalConsentCheckbox" id="legalConsentCheckbox" />
+                            <input className="legalConsentCheckbox" type="checkbox" name="legalConsentCheckbox" id="legalConsentCheckbox" required onChange={revealReCaptcha} />
                             <label htmlFor="legalConsentCheckbox">I agree to Privacy Policy and Terms of Service</label>
                         </div>
                         <ReCAPTCHA 
+                            className = "reCaptcha"
                             sitekey = { process.env.REACT_APP_GOOGLE_RECAPTCHA_SITE_KEY }
                             ref = { captchaRef }
                         />

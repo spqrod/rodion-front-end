@@ -153,21 +153,25 @@
             gap: variables.$medium-gap;
         }
         .legalConsentCheckboxContainer {
-            display: flex;
             gap: variables.$medium-gap;
+            display: none;
         }
-
+        .legalConsentCheckboxContainer.active {
+            display: flex;
+        }
         .legalConsentCheckbox {
             width: 30px;
             height: 30px;
         }
-
-        .contactLinksContainer {
-        }
-
         .contactLink {
             display: block;
         }
-
+        .reCaptcha {
+            transition: variables.$transition;
+            display: none;
+        }
+        .reCaptcha.active {
+            display: block;
+        }
     }
 }
