@@ -84,8 +84,18 @@ export default function Home() {
         <main className="homePage">
 
             <section className="heroSection">
-                <h1>Rodion</h1>
-                <h1>Web Developer</h1>
+                <div className="infoContainer">
+                    <h1>Hej!</h1>
+                    <h1>I'm Rodion.</h1>
+                </div>
+                <div className="imageContainer">
+                    <img className="image" src={require("../images/hero-photo.jpeg")} alt="" />
+                </div>
+            </section>
+
+            <section className="aboutSection">
+                <h2>About</h2>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Libero eum ratione hic cupiditate, quod, laudantium, nemo voluptas maiores deleniti nisi eaque odit obcaecati rerum voluptatibus eveniet? Dolorem consequatur, similique molestiae fugit tenetur iure cumque. Facilis assumenda cumque, maiores ab quas tenetur porro dolorem ducimus soluta repellat laborum dolore quis, enim animi odit provident eum! Molestiae doloremque non quis cupiditate nesciunt ad dignissimos vel voluptatum velit voluptate mollitia dolorum excepturi quod accusantium iusto architecto iure animi quo quaerat saepe, soluta est optio ut! Laudantium itaque cupiditate iure beatae, accusamus animi harum aspernatur totam iusto dolor similique sed earum autem culpa doloremque.</p>
             </section>
 
             <section className="stackSection">

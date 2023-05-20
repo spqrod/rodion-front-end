@@ -5,19 +5,24 @@
     $max-content-width: 1200px;
     $side-padding-for-sections: max(5vw, calc((100vw - $max-content-width) / 2));
 
-    $primary: #ffc642;
+    $primary: #00658d;
     $on-primary: #ffffff;
-    $primary-container: #facae0;
-    $on-primary-container: #3d0026;
-    $background: #faf3fa;
-    $on-background: #1f1a1c;
-    $surface: #ffffff;
-    $surface-transparent: #8d8d8d69;
-    $on-surface: #1f1a1c;
-    $outline: #827378;
-    $surface-variant: #f1dee3;
-    $on-surface-variant: #504348;
+    $primary-container: #c6e7ff;
+    $on-primary-container: #001e2d;
 
+    $background: #fafcff;
+    $on-background: #001f2a;
+
+    $surface: #fafcff;
+    $on-surface: #1f1a1c;
+
+    $surface-variant: #dde3ea;
+    $on-surface-variant: #41484d;
+
+    $outline: #71787e;
+
+    $surface-transparent: #8d8d8d69;
+    
     $blur: 10px;
 
     $border: 1px solid $outline;

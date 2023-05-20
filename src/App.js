@@ -12,7 +12,7 @@ function App() {
   return (
     <div>
       <ScrollToTop />
-      <Header />
+      {/* <Header /> */}
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/privacy-policy" element={<PrivacyPolicy />} />

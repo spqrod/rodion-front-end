@@ -10,6 +10,19 @@
     }
 
     .heroSection {
+        height: 100vh;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        .infoContainer {
+            width: 50%;
+        }
+        .imageContainer {
+            width: 50%;
+        }
+        .image {
+            max-width: 100%;
+        }
     }
 
     .stackSection {
